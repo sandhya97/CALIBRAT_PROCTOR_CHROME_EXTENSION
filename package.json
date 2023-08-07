@@ -1,0 +1,20 @@
+{
+  "name": "calibrat_proctor_chrome_extension",
+  "version": "1.0.0",
+  "description": "Date: 22.05.2023",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/CALIBRAT_PROCTOR_CHROME_EXTENSION"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
