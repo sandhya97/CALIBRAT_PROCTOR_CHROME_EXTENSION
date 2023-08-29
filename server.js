@@ -25,8 +25,8 @@ app.use('/', express.static('public'))
 // })
 
 io.on('connection', (socket) => {
-  // console.log('user joined'+count++);
-  // console.log('socket Id'+socket.id);
+ console.log('user joined'+count++);
+ console.log('socket Id'+socket.id);
   clients[socket.id] = socket;
 // console.log(clients);
   // Handle incoming video streams from the client
@@ -82,7 +82,7 @@ io.on('connection', (socket) => {
 })
 
 // START THE SERVER =================================================================
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8081
 server.listen(port, () => {
   try{
   console.log(`Express server listening on port ${port}`)
