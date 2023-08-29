@@ -27,7 +27,7 @@ app.use('/', express.static('public'))
 io.on('connection', (socket) => {
   // console.log('user joined'+count++);
   // console.log('socket Id'+socket.id);
-  clients[socket.id] = socket;
+  clients.push(socket);
  console.log(clients.length);
   // Handle incoming video streams from the client
   socket.on('stream', (data) => {
