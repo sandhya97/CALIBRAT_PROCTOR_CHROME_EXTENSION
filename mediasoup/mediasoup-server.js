@@ -9,21 +9,21 @@ const httpServer = http.createServer(app);
 httpServer.keepAliveTimeout = (60 * 100000) + 1000;
 httpServer.headersTimeout = (60 * 1000) + 2000;
 const io = require('socket.io')(httpServer, {
-    cors: { origin: '*' },
+    cors: { origin: true,credentials:true },
     transports: ['polling', 'websocket'], // Set the allowed transports
     allowEIO3: true, // Allow EIO version 3
 
 
 });
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200'); // Replace with your Angular app's URL
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Replace with your Angular app's URL
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     next();
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8081;
 
 let worker;
 let router;
