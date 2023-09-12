@@ -23,8 +23,8 @@ module.exports =
 		// NOTE: Set your own valid certificate files.
 		tls        :
 		{
-			cert : process.env.HTTPS_CERT_FULLCHAIN || "/home/sandhyaangular/cert/CA.pem",
-			key  : process.env.HTTPS_CERT_PRIVKEY || "/home/sandhyaangular/cert/CA.key",
+			cert : process.env.HTTPS_CERT_FULLCHAIN || "server/CA.key",
+			key  : process.env.HTTPS_CERT_PRIVKEY || "server/CA.key",
 			passphrase:'Sandhya@2021'
 		}
 	},
