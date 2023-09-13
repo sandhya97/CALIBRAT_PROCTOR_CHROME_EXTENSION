@@ -1,2 +1,5 @@
 #dependencies
 /node_modules
+/mediasoup/node_modules
+/mediasoup-demo/app/node_modules
+/mediasoup-demo/server/node_modules
